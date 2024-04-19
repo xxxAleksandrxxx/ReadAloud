@@ -15,11 +15,11 @@ def split_to_sentences_simple(text:str) -> list:
     not_end = ":-"
     for i in range(n):
         if text[i] in sentence_end:
-
-            if text[i-4:i+1].startswith(" "):
+            # if text[i-4:i+1].startswith(" "):
+            if text[i-3:i+1].startswith(" "):    # i-4 controls the length of the shortest word. assume it is 3 symbols at least to handle words like some "etc.", "ape." and others
                 continue
             elif text[i-3:i+1].startswith(" ") and not any([
-                text[i-3:i+1].lower() == " ai."
+                text[i-3:i+1].lower() == " ai."   # I forgot what that magic do... 
             ]):
                 # print('\n')
                 # print(f"<{text[i-3:i+1]}>")
