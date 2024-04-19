@@ -1,7 +1,10 @@
-# It works.
+# It works!
+# extract text from epub and save as .txt with each sentence on separate row.
 # Probably better to use it as Jupyter Notebook as each book
 # would probably have different styles so different ways 
 # should be applied to prepare and clean them
+
+
 
 from epub_reader import *
 import utils
