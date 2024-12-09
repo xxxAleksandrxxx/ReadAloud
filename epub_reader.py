@@ -30,7 +30,7 @@ class BookEpub:
     # Done
     def epub_get_content(self):
         """
-        Returns usirted list of files it the EPUB archive.
+        Returns unsorted list of files in the EPUB archive.
         """
         content = list()
         with zipfile.ZipFile(self.file_path, 'r') as zf:
@@ -82,7 +82,7 @@ class BookEpub:
 
     def epub_get_text_from_parts(self, part_name=None):
         """
-        Opens part of extracted epud, extract text, clean it from html code and return cleanned text
+        Opens part of extracted epub, extract text, clean it from html code and return cleaned text
         """
         if part_name == None:
             part_name = input("Enter full path to the file you need:\n")
@@ -100,7 +100,7 @@ class BookEpub:
 
     def epub_print_text_from_parts(self, part_name=None):
         """
-        Opens part of extracted epud, extract text, clean it from html code and print cleanned text
+        Opens part of extracted epud, extract text, clean it from html code and print cleaned text
         """
         if part_name == None:
             part_name = input("Enter full path to the file you need:\n")
